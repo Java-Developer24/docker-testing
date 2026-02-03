@@ -1,0 +1,15 @@
+name: performance-arena-backend
+location: eastus
+
+properties:
+  configuration:
+    ingress:
+      external: false
+      targetPort: 3000
+  template:
+    containers:
+      - name: backend
+        image: <ACR_NAME>.azurecr.io/backend:latest
+        env:
+          - name: PORT
+            value: "3000"
