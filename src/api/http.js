@@ -3,7 +3,7 @@ import { toast } from "sonner";
 
 // Use relative paths so nginx proxy can handle routing
 // This works in both development (with vite proxy) and production (with nginx proxy)
-let API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
+let API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://backend-api-app-fbbcdpfcdbg8d0g3.canadacentral-01.azurewebsites.net/api';
 
 
 if (!API_BASE_URL) {
