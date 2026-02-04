@@ -41,8 +41,6 @@ const ManagerLeaderboard = () => {
 
   const sortedData = [...leaderboardData].sort((a, b) => {
     if (sortBy === "points") return b.points - a.points;
-    if (sortBy === "revenue") return b.revenue - a.revenue;
-    if (sortBy === "nps") return b.nps - a.nps;
     return 0;
   });
 
@@ -217,8 +215,7 @@ const ManagerLeaderboard = () => {
       >
         {[
           { key: "points", label: "Points", icon: Star },
-          { key: "revenue", label: "Revenue", icon: Zap },
-          { key: "nps", label: "NPS", icon: Target },
+          
         ].map((tab) => (
           <button
             key={tab.key}

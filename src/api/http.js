@@ -6,7 +6,6 @@ import { toast } from "sonner";
 const API_BASE_URL = 'https://backend-api-app-fbbcdpfcdbg8d0g3.canadacentral-01.azurewebsites.net/api';
 
 
-
 if (!API_BASE_URL) {
   throw new Error("❌ VITE_API_BASE_URL is not defined");
 }

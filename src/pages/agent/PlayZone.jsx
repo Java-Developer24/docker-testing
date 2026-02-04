@@ -24,7 +24,7 @@ import {
 import { cn } from "../../lib/utils";
 import EliteSpinWheel from "../../components/game/EliteSpinWheel";
 import SpinWheelModal from "../../components/game/SpinWheelModal";
-import SpinWheelNew from "../../components/game/SpinWheelNew";
+import SpinWheelWrapper from "../../components/SpinWHeel/SpinWheelWrapper";
 import ScratchCardRevealModal from "../../components/game/ScratchCardRevealModal";
 import SpinWheelBanner from "../../components/game/SpinWheelBanner";
 import WeeklyChallenges from "../../components/game/WeeklyChallenges";
@@ -354,7 +354,7 @@ const PlayZone = () => {
 
       {/* Full-Screen Scratch Card Reveal Modal */}
       <ScratchCardRevealModal
-        isOpen={activeScratchCard !== null && todaysPerformance.meetsThreshold}
+        isOpen={activeScratchCard !== null}
         onClose={() => {
           setActiveScratchCard(null);
           setScratchRevealed(false);
@@ -367,7 +367,7 @@ const PlayZone = () => {
       />
 
       {/* Spin Wheel Modal with Token Deduction - New Enhanced Wheel */}
-      <SpinWheelNew
+      <SpinWheelWrapper
         isOpen={showWheelModal}
         onClose={() => setShowWheelModal(false)}
         onSpin={handleSpinWheel}
